@@ -1,0 +1,60 @@
+:root{
+    --ink:#161210;
+    --parchment:#e7dcc0;
+    --parchment-dim:#c7b788;
+    --red:#7c1f2b;
+    --red-deep:#4a1218;
+    --gold:#c9a24b;
+    --jade:#3a5f4a;
+    --gap:22px;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  html{scroll-padding-top:env(safe-area-inset-top,0px);}
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--parchment);
+    font-family:"Noto Sans SC",system-ui,sans-serif;
+    line-height:1.65;
+  }
+  h1,h2,h3{font-family:"Noto Serif SC",Georgia,serif;font-weight:700;margin:0;}
+  .wrap{max-width:820px;margin:0 auto;padding:0 24px;}
+  section{padding:56px 0;border-top:1px solid rgba(201,162,75,0.22);}
+  .kicker{color:var(--gold);font-size:0.95rem;margin-bottom:6px;}
+  section h2{font-size:clamp(1.4rem,3vw,1.8rem);margin-bottom:24px;}
+
+  /* HERO */
+  .hero{
+    position:relative;
+    padding:60px 0 30px;
+    text-align:center;
+    background:radial-gradient(ellipse at 50% 0%, rgba(124,31,43,0.5), transparent 62%), var(--ink);
+    overflow:hidden;
+  }
+  .hero h1{font-size:clamp(2.2rem,6vw,3.6rem);color:var(--gold);letter-spacing:0.03em;}
+  .hero p{color:var(--parchment-dim);font-size:1.05rem;max-width:46ch;margin:14px auto 0;}
+  .dragon-wrap{width:100%;max-width:800px;margin:14px auto 0;}
+  #dragon{overflow:visible;width:100%;height:auto;display:block;}
+  @media (prefers-reduced-motion: no-preference){
+    #dragon .draw{stroke-dasharray:2600;stroke-dashoffset:2600;animation:draw 3.6s ease-out forwards;}
+    #dragon .fade{opacity:0;animation:fadein 1.2s ease-out 2.4s forwards;}
+  }
+  @keyframes draw{to{stroke-dashoffset:0;}}
+  @keyframes fadein{to{opacity:1;}}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--gap);}
+  .card{text-align:center;}
+  .card svg{width:60px;height:60px;margin-bottom:10px;}
+  .card h3{font-size:1.02rem;margin:0 0 4px;color:var(--gold);}
+  .card p{font-size:0.9rem;color:var(--parchment-dim);margin:0;}
+
+  .landmark{display:flex;gap:18px;padding:18px 0;border-bottom:1px dashed rgba(201,162,75,0.28);align-items:flex-start;}
+  .landmark:last-child{border-bottom:none;}
+  .landmark svg{flex:none;width:56px;height:56px;}
+  .landmark h3{font-size:1.15rem;margin:0 0 4px;color:var(--parchment);}
+  .landmark p{margin:0;color:var(--parchment-dim);font-size:0.95rem;}
+
+  footer{text-align:center;padding:30px 0 40px;color:#7d6d48;font-size:0.85rem;}

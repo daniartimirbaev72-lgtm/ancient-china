@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ancient China</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>龙 · Ancient China</h1>
+    <p>Dragon, silk and mountains — a journey through symbols, inventions and places that have outlasted millennia.</p>
+    <div class="dragon-wrap">
+      <svg id="dragon" viewBox="0 -20 900 340" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="scales" width="20" height="20" patternUnits="userSpaceOnUse" patternTransform="rotate(6)">
+            <rect width="20" height="20" fill="#7c1f2b"/>
+            <path d="M0,20 Q10,3 20,20" fill="none" stroke="#4a1218" stroke-width="1.8"/>
+            <path d="M0,12 Q10,-3 20,12" fill="none" stroke="#94303f" stroke-width="0.9" opacity="0.6"/>
+          </pattern>
+          <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#e8c77a" stop-opacity="0.55"/>
+            <stop offset="1" stop-color="#e8c77a" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+
+        <!-- tail fin -->
+        <path class="fade" d="M45,230 L6,208 L18,236 L2,262 L38,246 Z" fill="#4a1218" stroke="#c9a24b" stroke-width="2"/>
+
+        <!-- shadow body (depth) -->
+        <path class="body-shadow draw" d="M45,230 C130,150 90,90 165,70 C230,54 210,140 280,155 C345,168 350,90 420,80 C480,72 470,150 540,150 C605,150 590,80 655,68 C715,58 730,110 780,95 C820,84 840,55 870,40"
+          fill="none" stroke="#38100f" stroke-width="34" stroke-linecap="round"/>
+
+        <!-- scaled body -->
+        <path class="body draw" d="M45,230 C130,150 90,90 165,70 C230,54 210,140 280,155 C345,168 350,90 420,80 C480,72 470,150 540,150 C605,150 590,80 655,68 C715,58 730,110 780,95 C820,84 840,55 870,40"
+          fill="none" stroke="url(#scales)" stroke-width="26" stroke-linecap="round"/>
+
+        <!-- top sheen for roundness -->
+        <path class="body draw" d="M45,230 C130,150 90,90 165,70 C230,54 210,140 280,155 C345,168 350,90 420,80 C480,72 470,150 540,150 C605,150 590,80 655,68 C715,58 730,110 780,95 C820,84 840,55 870,40"
+          fill="none" stroke="url(#sheen)" stroke-width="10" stroke-linecap="round" transform="translate(0,-7)"/>
+
+        <!-- dorsal fins along the spine -->
+        <g class="fade" fill="#c9a24b">
+          <path d="M110,132 L122,92 L134,130 Z"/>
+          <path d="M195,86 L206,48 L216,84 Z"/>
+          <path d="M255,150 L266,112 L277,148 Z"/>
+          <path d="M330,100 L341,62 L352,98 Z"/>
+          <path d="M405,116 L416,78 L427,114 Z"/>
+          <path d="M460,96 L471,58 L482,94 Z"/>
+          <path d="M525,168 L536,130 L547,166 Z"/>
+          <path d="M590,98 L601,60 L612,96 Z"/>
+          <path d="M660,110 L671,72 L682,108 Z"/>
+          <path d="M735,78 L746,42 L757,76 Z"/>
+        </g>
+
+        <!-- legs with 3-clawed feet -->
+        <g class="fade" stroke="#c9a24b" stroke-width="5" stroke-linecap="round" fill="none">
+          <path d="M240,140 C228,164 218,178 206,186"/>
+          <path d="M197,180 l-9,5 M206,186 l-4,10 M206,186 l8,8"/>
+          <path d="M470,140 C458,164 448,178 436,186"/>
+          <path d="M427,180 l-9,5 M436,186 l-4,10 M436,186 l8,8"/>
+          <path d="M700,90 C692,112 684,124 672,132"/>
+          <path d="M664,126 l-8,5 M672,132 l-3,9 M672,132 l7,7"/>
+        </g>
+
+        <!-- flowing mane behind the head -->
+        <g class="fade" fill="#c9a24b">
+          <path d="M800,58 C808,42 806,28 794,20 C806,22 818,32 816,48 Z"/>
+          <path d="M820,48 C830,34 830,20 818,10 C830,12 842,22 840,38 Z"/>
+          <path d="M838,42 C850,30 852,16 842,4 C854,8 864,20 860,36 Z"/>
+        </g>
+
+        <!-- head -->
+        <g class="fade">
+          <path d="M870,40 C892,10 898,-16 880,-34 C862,-50 832,-46 820,-24 C810,-6 818,14 838,26 C848,32 860,36 870,40 Z"
+            fill="#7c1f2b" stroke="#c9a24b" stroke-width="3"/>
+          <!-- brow ridge -->
+          <path d="M828,-20 C836,-30 850,-30 856,-22" fill="none" stroke="#4a1218" stroke-width="3" stroke-linecap="round"/>
+          <!-- forked horns -->
+          <path d="M862,-30 C864,-52 878,-68 896,-70 C886,-58 880,-44 874,-30 M886,-58 C892,-64 900,-66 906,-64" fill="none" stroke="#e7dcc0" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M840,-34 C838,-56 848,-74 864,-78 C856,-64 852,-50 848,-36 M856,-64 C862,-70 870,-72 876,-70" fill="none" stroke="#e7dcc0" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- eye -->
+          <path d="M828,-6 C836,-14 850,-14 856,-8" fill="none" stroke="#1a1613" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="842" cy="-2" r="5.5" fill="#1a1613"/>
+          <circle cx="844" cy="-4" r="1.8" fill="#e7dcc0"/>
+          <!-- snout, nostril, teeth -->
+          <path d="M880,-34 C892,-42 900,-40 900,-28 C900,-18 892,-12 882,-16" fill="#4a1218" stroke="#c9a24b" stroke-width="2"/>
+          <circle cx="890" cy="-28" r="2" fill="#1a1613"/>
+          <path d="M884,-18 l3,7 M892,-20 l3,7" stroke="#e7dcc0" stroke-width="2" stroke-linecap="round"/>
+          <path d="M878,-14 C888,-6 892,4 888,14" fill="none" stroke="#c9a24b" stroke-width="2" stroke-linecap="round"/>
+          <!-- whiskers -->
+          <path d="M826,10 C810,8 794,14 784,28" stroke="#c9a24b" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M832,22 C818,26 806,36 804,50" stroke="#c9a24b" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Symbols</div>
+    <h2>Signs still in use today</h2>
+    <div class="grid">
+      <div class="card">
+        <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" fill="none" stroke="#c9a24b" stroke-width="2"/><path d="M32,4 A14,14 0 0,1 32,32 A14,14 0 0,0 32,60 A28,28 0 0,1 32,4 Z" fill="#e7dcc0"/><path d="M32,4 A14,14 0 0,0 32,32 A14,14 0 0,1 32,60 A28,28 0 0,0 32,4 Z" fill="#7c1f2b"/><circle cx="32" cy="18" r="4" fill="#7c1f2b"/><circle cx="32" cy="46" r="4" fill="#e7dcc0"/></svg>
+        <h3>Yin &amp; Yang</h3><p>Balance of opposing forces</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 64 64"><rect x="14" y="14" width="36" height="36" fill="#c9a24b" stroke="#e7dcc0" stroke-width="2"/><circle cx="32" cy="32" r="9" fill="#1a1613"/></svg>
+        <h3>Coin</h3><p>Round heaven, square earth</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 64 64"><path d="M32,10 C46,10 52,22 52,34 C52,48 44,56 32,58 C20,56 12,48 12,34 C12,22 18,10 32,10 Z" fill="#7c1f2b" stroke="#c9a24b" stroke-width="2"/><line x1="32" y1="10" x2="32" y2="58" stroke="#c9a24b" stroke-width="1.5"/></svg>
+        <h3>Lantern</h3><p>Light that invites fortune home</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 64 64"><path d="M32,54 C18,44 14,32 20,22 C24,16 32,16 32,24 C32,16 40,16 44,22 C50,32 46,44 32,54 Z" fill="none" stroke="#c9a24b" stroke-width="2.5"/></svg>
+        <h3>Lotus</h3><p>Purity rising out of the mud</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 64 64"><path d="M32,8 L38,26 L58,26 L42,38 L48,58 L32,46 L16,58 L22,38 L6,26 L26,26 Z" fill="none" stroke="#c9a24b" stroke-width="2"/></svg>
+        <h3>Phoenix</h3><p>Rebirth, paired in harmony with the dragon</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 64 64"><rect x="10" y="26" width="44" height="6" fill="#c9a24b"/><rect x="10" y="36" width="20" height="6" fill="#c9a24b"/><rect x="34" y="36" width="20" height="6" fill="#c9a24b"/></svg>
+        <h3>Trigrams</h3><p>The foundation of the I Ching</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Achievements</div>
+    <h2>The Four Great Inventions — and more</h2>
+    <div class="grid">
+      <div class="card">
+        <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="24" fill="none" stroke="#c9a24b" stroke-width="2.5"/><line x1="32" y1="32" x2="32" y2="14" stroke="#7c1f2b" stroke-width="3"/><line x1="32" y1="32" x2="44" y2="38" stroke="#7c1f2b" stroke-width="3"/><circle cx="32" cy="32" r="3" fill="#e7dcc0"/></svg>
+        <h3>Compass</h3><p>Han dynasty, c. 2nd century BCE — navigation by earth's magnetism</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 64 64"><rect x="12" y="14" width="40" height="36" fill="none" stroke="#c9a24b" stroke-width="2.5"/><line x1="18" y1="24" x2="46" y2="24" stroke="#c9a24b" stroke-width="2"/><line x1="18" y1="32" x2="46" y2="32" stroke="#c9a24b" stroke-width="2"/><line x1="18" y1="40" x2="38" y2="40" stroke="#c9a24b" stroke-width="2"/></svg>
+        <h3>Paper</h3><p>Cai Lun, c. 105 CE — an affordable writing surface for the world</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 64 64"><circle cx="32" cy="40" r="6" fill="#7c1f2b"/><path d="M20,40 C20,20 44,20 44,40" fill="none" stroke="#c9a24b" stroke-width="2.5"/><path d="M14,16 l6,6 M50,16 l-6,6 M32,10 l0,8" stroke="#c9a24b" stroke-width="2" stroke-linecap="round"/></svg>
+        <h3>Gunpowder</h3><p>Taoist alchemists, 9th century — searching for immortality, they found something else</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 64 64"><rect x="12" y="20" width="40" height="10" rx="1" fill="none" stroke="#c9a24b" stroke-width="2.5"/><rect x="16" y="34" width="32" height="16" fill="none" stroke="#c9a24b" stroke-width="2"/></svg>
+        <h3>Printing</h3><p>Woodblock printing from the 7th century — text became reproducible</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 64 64"><path d="M18,20 Q32,12 46,20 L46,44 Q32,52 18,44 Z" fill="none" stroke="#c9a24b" stroke-width="2.5"/><line x1="32" y1="16" x2="32" y2="48" stroke="#c9a24b" stroke-width="1.5"/></svg>
+        <h3>Silk</h3><p>The secret of silkworm cultivation was guarded by emperors for centuries</p>
+      </div>
+      <div class="card">
+        <svg viewBox="0 0 64 64"><path d="M22,44 C22,30 42,30 42,44" fill="none" stroke="#c9a24b" stroke-width="2.5"/><rect x="26" y="14" width="12" height="20" rx="3" fill="none" stroke="#c9a24b" stroke-width="2"/></svg>
+        <h3>Porcelain</h3><p>"China" became synonymous with the fine white porcelain of the Tang era</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Places</div>
+    <h2>Landmarks</h2>
+
+    <div class="landmark">
+      <svg viewBox="0 0 64 64"><path d="M4,44 L12,36 L20,44 L28,32 L36,44 L44,30 L52,44 L60,36" fill="none" stroke="#c9a24b" stroke-width="3" stroke-linejoin="round"/><rect x="2" y="44" width="60" height="6" fill="#7c1f2b"/></svg>
+      <div><h3>The Great Wall</h3><p>Over 21,000 km of fortifications, built by successive dynasties across more than two millennia.</p></div>
+    </div>
+    <div class="landmark">
+      <svg viewBox="0 0 64 64"><path d="M8,50 L8,30 L32,14 L56,30 L56,50 Z" fill="none" stroke="#c9a24b" stroke-width="3" stroke-linejoin="round"/><line x1="8" y1="50" x2="56" y2="50" stroke="#7c1f2b" stroke-width="4"/></svg>
+      <div><h3>The Forbidden City</h3><p>The palace complex in Beijing, home to 24 emperors and now the world's largest palace museum.</p></div>
+    </div>
+    <div class="landmark">
+      <svg viewBox="0 0 64 64"><rect x="10" y="26" width="10" height="24" fill="none" stroke="#c9a24b" stroke-width="2.5"/><rect x="27" y="20" width="10" height="30" fill="none" stroke="#c9a24b" stroke-width="2.5"/><rect x="44" y="30" width="10" height="20" fill="none" stroke="#c9a24b" stroke-width="2.5"/><circle cx="15" cy="18" r="4" fill="none" stroke="#7c1f2b" stroke-width="2"/><circle cx="32" cy="12" r="4" fill="none" stroke="#7c1f2b" stroke-width="2"/><circle cx="49" cy="22" r="4" fill="none" stroke="#7c1f2b" stroke-width="2"/></svg>
+      <div><h3>The Terracotta Army</h3><p>Over 8,000 clay soldiers buried near Xi'an to guard China's first emperor.</p></div>
+    </div>
+    <div class="landmark">
+      <svg viewBox="0 0 64 64"><path d="M16,50 C16,30 24,20 32,10 C40,20 48,30 48,50 Z" fill="none" stroke="#c9a24b" stroke-width="2.5"/><circle cx="32" cy="10" r="4" fill="#7c1f2b"/></svg>
+      <div><h3>The Temple of Heaven</h3><p>Beijing, 15th century — where emperors performed rites to pray for good harvests.</p></div>
+    </div>
+    <div class="landmark">
+      <svg viewBox="0 0 64 64"><path d="M4,50 C12,30 16,44 22,26 C28,42 32,30 38,44 C44,28 48,40 60,50 Z" fill="none" stroke="#c9a24b" stroke-width="2.5" stroke-linejoin="round"/></svg>
+      <div><h3>The Guilin Karst Mountains</h3><p>The scenery along the Li River has inspired Chinese poets and painters for centuries.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>hand-drawn · made with respect for the subject</footer>
+
+</body>
+</html>
